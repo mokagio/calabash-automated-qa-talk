@@ -1,0 +1,23 @@
+{
+  "name": "reveal-presentation-template",
+  "version": "1.0.0",
+  "description": "A template for presentations that run in the browser made with reveal.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bizzby/mobilise-meetup-show-and-tell"
+  },
+  "author": "Giovanni Lodi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bizzby/mobilise-meetup-show-and-tell/issues"
+  },
+  "homepage": "https://github.com/Bizzby/mobilise-meetup-show-and-tell",
+  "dependencies": {
+    "jade": "^1.9.2",
+    "stylus": "^0.50.0"
+  }
+}

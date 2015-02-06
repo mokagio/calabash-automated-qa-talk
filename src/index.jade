@@ -1,0 +1,91 @@
+doctype html
+html(lang="en")
+  head
+    title BIZZBY
+    meta(charset="utf-8")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    link(rel='stylesheet', href='css/reveal.css')
+    link(rel='stylesheet', href='css/bizzby.css', id='theme')
+    link(rel='stylesheet', href='lib/css/zenburn.css')
+    link(rel='stylesheet', href='css/font-awesome.min.css')
+    script(type="text/javascript").
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  body
+    div.reveal
+      div.slides
+        section
+          h1.right
+            An awesome title
+
+          h3.left Giovanni Lodi
+          p.left
+            | Freelance iOS Developer
+          p.left
+            i.fa.fa-twitter
+            | &nbsp;
+            a(href="https://twitter.com/mokagio") mokagio
+
+          br
+          p.left 16th February 2015
+
+        section(data-background="#7f8c8d", data-background-transition="slide")
+          //- Because thes sections are children of a section they'll go down vertically
+          section
+            h1
+              | Change color
+              br
+              | to be cool
+
+          section
+            img(src="css/images/old-phone.jpg", alt="Phone")
+
+        section(data-background="rgb(54, 171, 224)", data-background-transition="slide")
+          h1 Another color, yay!
+
+        section
+          h1 And back to the original
+
+        section
+          //- You can use link of course
+          h3
+            a(href="http://cocoapods.org/") CocoaPods
+          img.frameless(src="css/images/cocoapods.png", alt="CocoaPods")
+
+        section
+          h3.left Giovanni Lodi
+          p.right
+            | Freelance iOS Developer
+          p.right
+            i.fa.fa-twitter &nbsp;
+            a(href="https://twitter.com/mokagio") mokagio
+          p.right
+            i.fa.fa-github &nbsp;
+            a(href="https://github.com/mokagio") mokagio
+          p.right giovanni.lodi42@gmail.com
+
+    script(src="lib/js/head.min.js")
+    script(src="js/reveal.min.js")
+    script(type='text/javascript').
+      //- Full list of configuration options available here:
+      //- https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        //- Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
