@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
   head
-    title BIZZBY
+    title Calabash and Automated QA
     meta(charset="utf-8")
     meta(name="apple-mobile-web-app-capable", content="yes")
     meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
@@ -16,8 +16,7 @@ html(lang="en")
     div.reveal
       div.slides
         section
-          h1.right
-            An awesome title
+          h1.right Sync:Mobile
 
           h3.left Giovanni Lodi
           p.left
@@ -30,40 +29,92 @@ html(lang="en")
           br
           p.left 16th February 2015
 
-        section(data-background="#7f8c8d", data-background-transition="slide")
-          //- Because thes sections are children of a section they'll go down vertically
+        //- section(data-background="#7f8c8d", data-background-transition="slide")
+        section
+          h1 Calabash
+          h2 (and it's setup in ANZ FX)
+
+        section
+          h1 DDQA
+
+        //- section(data-background="#C4E982")
+        section
           section
             h1
-              | Change color
-              br
-              | to be cool
+              a(href="http://calaba.sh/") Calabash
 
           section
-            img(src="css/images/old-phone.jpg", alt="Phone")
+            h2
+              | Writing tests using
+              br
+              a(href="https://cukes.info/") Cucumber
+
+          section
+            i Image here
+
+        section
+          section
+            h2 A better calabash setup
+            p No maintanance after the setup
+
+          section
+            h2 Default setup
+            .h-separator
+            h4.fragment Target
+            h4.fragment Embedded framework
+
+          section
+            h2 Default setup
+            h3 The problems
+            .h-separator
+            h4.fragment Add files to both target
+            h4.fragment Manual upgrade?!
+
+           section
+            h2 How can we do it?
+            .h-separator
+            h4.fragment Build Configuration
+            h4.fragment CocoaPods
 
         section(data-background="rgb(54, 171, 224)", data-background-transition="slide")
-          h1 Another color, yay!
+          h1 Live Demo!
 
         section
-          h1 And back to the original
+          section
+            h1 DDQA
+            .h-separator
+            h2.left.fragment Developers
+            h2.left.fragment Driven
+            h2.left.fragment Quality
+            h2.left.fragment Assurance
+
+          section
+            h2 Developers should write acceptance tests
+
+          section
+            h2 Traditional approach
+            p
+              i Image here
+
+          section
+            h2 Traditional approach++
+            p
+              i Image here
+
+          section
+            h2 A better approach
+            p
+              i Image here
+
+          section
+            h2 A better approach
+            p
+              i Image here
 
         section
-          //- You can use link of course
+          h1 Thanks
           h3
-            a(href="http://cocoapods.org/") CocoaPods
-          img.frameless(src="css/images/cocoapods.png", alt="CocoaPods")
-
-        section
-          h3.left Giovanni Lodi
-          p.right
-            | Freelance iOS Developer
-          p.right
-            i.fa.fa-twitter &nbsp;
-            a(href="https://twitter.com/mokagio") mokagio
-          p.right
-            i.fa.fa-github &nbsp;
-            a(href="https://github.com/mokagio") mokagio
-          p.right giovanni.lodi42@gmail.com
+            a(href="https://twitter.com/mokagio") @mokagio
 
     script(src="lib/js/head.min.js")
     script(src="js/reveal.min.js")
