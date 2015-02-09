@@ -4,6 +4,25 @@ link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 document.getElementsByTagName( 'head' )[0].appendChild( link );</script></head><body><div class="reveal"><div class="slides"><section><h1 class="right">Sync:Mobile</h1><h2 class="right">#Odecee</h2><h3 class="left">Giovanni Lodi</h3><p class="left">Freelance iOS Developer</p><p class="left"><i class="fa fa-twitter"></i>&nbsp;<a href="https://twitter.com/mokagio">@mokagio</a></p><br><p class="left">16th February 2015</p></section><section><h1>Calabash</h1><h2>(and it's setup in ANZ FX)</h2></section><section><h1>DDQA</h1></section><section><section><h1><a href="http://calaba.sh/">Calabash</a></h1></section><section><h2>Writing tests using<br><a href="https://cukes.info/">Cucumber</a></h2></section><section><h2>How it works</h2><img src="css/images/calabash.jpg" alt="How Calabash works"></section></section><section><section><h2>A better calabash setup</h2><p>No maintanance needed</p></section><section><h2>Default setup</h2><div class="h-separator"></div><h4 class="fragment">Target</h4><h4 class="fragment">Embedded framework</h4></section><section><h2>Default setup</h2><h3>The problems</h3><div class="h-separator"></div><h4 class="fragment">Add files to both target</h4><h4 class="fragment">Manual upgrade?!</h4></section><section><h2>How can we do it?</h2><div class="h-separator"></div><h4 class="fragment">Build Configuration</h4><h4 class="fragment">CocoaPods</h4></section></section><section data-background="rgb(255,255,255)"><h1 style="color:rgb(69,69,69)">Live Demo!</h1></section><section><section><h1>DDQA</h1><div class="h-separator"></div><h2 class="left fragment">Developers</h2><h2 class="left fragment">Driven</h2><h2 class="left fragment">Quality</h2><h2 class="left fragment">Assurance</h2></section><section><h2>Developers should write acceptance tests</h2></section><section><h2>Traditional approach</h2><img src="css/images/traditional-approach.jpg" alt="Traditional approach"></section><section><h2>Traditional approach++</h2><img src="css/images/traditional-approach++.jpg" alt="Traditional approach++"></section><section><h2>TDD</h2></section><section><h2>A better approach</h2><img src="css/images/better-approach.jpg" alt="Better approach"></section><section><h2>A better approach</h2><p class="fragment">Story</p><p class="fragment">Developer writes acceptance tests</p><p class="fragment">Developer writes unit tests</p><p class="fragment">Developer makes tests pass</p><p class="fragment">Story is completed :)</p></section><section><h2>A better approach</h2><p>Story</p><p>Developer writes acceptance tests</p><p>Developer writes unit tests</p><p>Developer makes tests pass</p><p><h3>Developer REFACTORS!</h3></p><p>Story is completed :)</p></section></section><section><h1>Thanks</h1><h3><a href="https://twitter.com/mokagio">@mokagio</a></h3></section></div></div><script src="lib/js/head.min.js"></script><script src="js/reveal.js"></script><script type="text/javascript">//- Full list of configuration options available here:
 //- https://github.com/hakimel/reveal.js#configuration
+//- Optional libraries used to extend on reveal.js
+var dependencies = [
+  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+  { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+];
+// Add remotes plugin only if not in print mode, or it will appear on the print
+if (!window.location.search.match( /print-pdf/gi )) {
+  dependencies.push(
+  { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+  );
+  console.log("awesome");
+} else {
+  console.log("print!");
+}
+
 Reveal.initialize({
   controls: true,
   progress: true,
@@ -12,15 +31,5 @@ Reveal.initialize({
 
   theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
   transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-  //- Optional libraries used to extend on reveal.js
-  dependencies: [
-    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-    { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-  ]
+  dependencies: dependencies,
 });</script></body></html>
